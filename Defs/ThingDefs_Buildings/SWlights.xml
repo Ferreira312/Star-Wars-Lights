@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="SWBaseLight" ParentName="BuildingBase">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <designationCategory>Furniture</designationCategory>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>0</pathCost>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <altitudeLayer>Blueprint</altitudeLayer>
+    <passability>Standable</passability>
+	<minifiedDef>MinifiedThing</minifiedDef>
+  	<statBases>
+      <MaxHitPoints>2</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Flammability>0.4</Flammability>
+      <Mass>4</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <building>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <isEdifice>false</isEdifice>
+      <isInert>true</isInert>
+    </building>
+	<rotatable>true</rotatable>
+  	<selectable>true</selectable>
+  	<destroyable>true</destroyable>
+    <neverMultiSelect>true</neverMultiSelect>
+  	<clearBuildingArea>false</clearBuildingArea>
+	<researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+<!-- Light A -->
+    <ThingDef Name="SWLightA" ParentName="SWBaseLight">
+    <defName>SwLightA</defName>
+    <label>Star Wars Light A</label>
+    <graphicData>
+      <texPath>Things/Building/LightA/SWcorredorA</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>2,2</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <uiIconPath>Things/Building/LightA/SWcorredorA_UI</uiIconPath>
+    <description>Unlimited Power!!!! Atleast until it drains.</description>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(217,217,192,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+  <!-- Light B -->
+      <ThingDef Name="SWLightB" ParentName="SWBaseLight">
+    <defName>SwLightB</defName>
+    <label>Star Wars Light B</label>
+    <graphicData>
+      <texPath>Things/Building/LightB/SWcorredorB</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>2,2</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <uiIconPath>Things/Building/LightB/SWcorredorB_UI</uiIconPath>
+    <description>Unlimited Power!!!! Atleast until it drains.</description>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(217,217,192,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>17</basePowerConsumption>
+      </li>
+    </comps>
+  </ThingDef>
+  
+
+
+</Defs>
